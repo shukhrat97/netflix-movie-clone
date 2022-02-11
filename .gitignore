@@ -1,0 +1,28 @@
+# django stuff
+/.idea/*
+.idea
+.DS_Store
+._.DS_Store
+*.log
+*.pid
+*.py[cod]
+__pycache__/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+
+
+#local_settings.py
+#db.sqlite3
+#db.sqlite3-journal

@@ -1,0 +1,22 @@
+version: "3"
+services:
+  web:
+    build: .
+    depends_on:
+      - db
+    ports:
+      - 8000:8000
+    environment:
+      - POSTGRES_HOST=db
+      - POSTGRES_DB=postgres
+
+  db:
+    image: postgres:9.6
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
